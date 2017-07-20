@@ -11,7 +11,7 @@ uses
 
 type
   TDockNoteForm = class(TForm)
-	private
+  private
     FBanner: TShape;
     FNoteMemo: TMemo;
     FClearButton: TButton;
@@ -21,10 +21,10 @@ type
     function GetNotes: TStrings;
     procedure SetBannerColor(Value: TColor);
     procedure SetNotes(Value: TStrings);
-	public
+  public
     constructor CreateNew(AOwner: TComponent; Num: Integer = 0); override;
     destructor Destroy; override;
-	published
+  published
     property BannerColor: TColor read GetBannerColor write SetBannerColor;
     property Notes: TStrings read GetNotes write SetNotes;
   end;
@@ -44,10 +44,10 @@ var
   WasDesigning: Boolean;
 begin
   if FBanner <> nil then
-  	Exit;
+    Exit;
   WasDesigning := csDesigning in ComponentState;
   if WasDesigning then
-	  SetDesigning(False, False);
+    SetDesigning(False, False);
   FBanner := TShape.Create(nil);
   FBanner.Parent := Self;
   FBanner.Align := alTop;
@@ -66,7 +66,7 @@ begin
   FClearButton.SetBounds(8 + 160 - 75, 88 + 120 + 8, 75, 25);
   FClearButton.OnClick := ClearButtonClick;
   if WasDesigning then
-	  SetDesigning(True, False);
+    SetDesigning(True, False);
 end;
 
 destructor TDockNoteForm.Destroy;
@@ -84,22 +84,22 @@ end;
 
 function TDockNoteForm.GetBannerColor: TColor;
 begin
-	Result := FBanner.Brush.Color;
+  Result := FBanner.Brush.Color;
 end;
 
 function TDockNoteForm.GetNotes: TStrings;
 begin
-	Result := FNoteMemo.Lines;
+  Result := FNoteMemo.Lines;
 end;
 
 procedure TDockNoteForm.SetBannerColor(Value: TColor);
 begin
-	FBanner.Brush.Color := Value;
+  FBanner.Brush.Color := Value;
 end;
 
 procedure TDockNoteForm.SetNotes(Value: TStrings);
 begin
-	Notes.Assign(Value);
+  Notes.Assign(Value);
 end;
 
 end.

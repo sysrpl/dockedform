@@ -13,7 +13,7 @@ implementation
 
 procedure Register;
 begin
-	RegisterForm(TDockNoteForm, 'Note Form', 'A form to take notes', 'DockNoteFrm');
+  RegisterForm(TDockNoteForm, 'Note Form', 'A form to take notes', 'DockNoteFrm');
 end;
 
 end.
