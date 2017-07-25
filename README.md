@@ -5,5 +5,3 @@ This repository contains an example of a Lazarus inheritable form. To test open 
 
 
 ![ScreenShot](/dockedform.gif?raw=true "ScreenShot")
-
-![Movie](/docker.mp4?raw=true "Movie")
